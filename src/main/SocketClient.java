@@ -15,7 +15,7 @@ public class SocketClient {
         @Override
         public void run() {
             // 要连接的服务端IP地址和端口
-            String host = "81.71.68.105";
+            String host = "127.0.0.1";
             int port = 55533;
             // 与服务端建立连接
             Socket socket = null;
@@ -24,7 +24,7 @@ public class SocketClient {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            String message = "你好  lijinhao\n";
+            String message = "{"name": "java", "age": 34}";
             try {
                 socket.getOutputStream().write(message.getBytes("UTF-8"));
             } catch (IOException e) {
